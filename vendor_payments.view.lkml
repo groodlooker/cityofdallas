@@ -160,6 +160,10 @@ view: vendor_payments {
   dimension: vendor_name {
     type: string
     drill_fields: [activity]
+    link: {
+      label: "See Vendor Profile for {{ value }}"
+      url: "https://localhost:9999/dashboards/9?Vendor%20Name={{ value | url_encode }}"
+    }
     sql: ${TABLE}.vendor ;;
   }
 
